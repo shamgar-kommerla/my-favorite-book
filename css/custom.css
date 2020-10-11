@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-item{
+    padding : 0.4rem 1rem;
+}
+
+.navbar{
+    background-color: #000000ad;
+    top: 2.2rem;
+    z-index: 10;
+}
+
+.container-fluid{
+    position: relative !important;
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.introduction{
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+}
+
+.introduction h1{
+    color: yellow;
+    font-weight: bolder;
+    letter-spacing: 2rem;
+}
+.introduction p{
+    color:wheat;
+}
+
+.overlay{
+    background-color: #0000007d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar{
+        top: 0;
+        background-color: #000000d4  ;
+    }
+
+    .introduction{
+        top: 60%;
+        left: 50%;
+    }
+}
+
+
+.introduction a {
+    text-decoration:none;
+    letter-spacing:2px;
+  }
+  
+  .button{
+    padding:0.4rem 2rem;
+    color:black;
+    font-weight: bold;
+    background-color:rgba(255, 255, 255, 0.473); 
+    border: 2px solid black;
+    transition: all 0.7s;
+  }
+  
+  .button:hover{
+    background-color:#272322;
+    color:white;
+    border:2px solid white;
+    border: 2px solid white;
+    border-radius:3px;
+    
+  }
+
+  .modal-body{
+    position: relative;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color:#ffffff;
+    font-weight: 500;
+  }
+
+.modal-body::before{
+    content: "";
+    position: absolute;
+    background-color: #0000007d;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+  .modal-body form{
+      position: relative;
+      color: #ffffff;
+        z-index: 3;
+  }
+
+  .modal-header{
+      background-color: #000000ad;
+      color: #ffffff;
+  }
