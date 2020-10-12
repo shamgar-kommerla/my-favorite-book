@@ -1,0 +1,152 @@
+
+body {
+    background-color: #00000027;
+}
+
+.navbar {
+    background-color: #000000ad;
+    z-index: 10;
+}
+
+.nav-item {
+    padding: 0.4rem 1rem;
+}
+
+.jumbotron {
+    position: relative !important;
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+    padding: 0;
+}
+
+.overlay {
+    background-color: #0000007d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.blockquote-container {
+    position: relative;
+    z-index: 10;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 3rem auto;
+    width: 60%;
+}
+
+/* .category a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.category {
+    margin: 2rem;
+    position: relative;
+    background-color: aqua;
+    width: 200px;
+    height: 280px;
+    overflow: hidden;
+    transition: all 0.7s;
+}
+
+.category:hover{
+    box-shadow: 2px 2px 5px 5px #0000008c;
+    width: 220px;
+    height: 300px;
+}
+
+.category .category-img,.category-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.category-name {
+    position: absolute;
+    background-color: brown;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+   
+}
+.category-name h2{
+    width: 100%;
+    margin:0 auto;
+} */
+
+.category a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.category {
+    margin: 2rem;
+    position: relative;
+    background-color: aqua;
+    width: 200px;
+    height: 280px;
+    overflow: hidden;
+    transition: all 0.7s;
+}
+
+.category:hover{
+    box-shadow: 2px 2px 5px 5px #0000008c;
+    width: 220px;
+    height: 300px;
+}
+.category .category-img,.category-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.category-name {
+    position: absolute;
+    background-color: brown;
+    width: 100%;
+    height: 40px;
+    transition: all 0.7s;
+}
+
+.category-name h2{
+    width: 100%;
+    margin:0 auto;
+}
+
+.category:hover .category-name {
+    transform: translateY(-40px);
+}
+
+.modal-body {
+    position: relative;
+    background-image: url(./img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.modal-body::before {
+    content: "";
+    position: absolute;
+    background-color: #0000007d;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.modal-body form {
+    position: relative;
+    color: #ffffff;
+    z-index: 3;
+}
+
+.modal-header {
+    background-color: #000000ad;
+    color: #ffffff;
+}
+

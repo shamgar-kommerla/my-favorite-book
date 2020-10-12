@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Name</title>
+
+    <!-- css links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/styles2.css" > 
+</head>
+
+<body>
+    <div class="jumbotron main-container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="/img/logo.png" alt="LOGO" height="60px" width="60px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-left">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/"><i class="fas fa-home"></i>Home </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/library"><i class="fa fa-book-reader"></i> BookShelf</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#requestModal"><i
+                                    class="fa fa-book"></i> Request book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" data-toggle="modal" data-target="#contactModal"><i
+                                    class="fa fa-address-book"></i> Contact
+                                us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container blockquote-container">
+            <div>
+                <p>`` Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. ``</p>
+                <footer class="text-right">- <cite title="Source Title">Source Title</cite></footer>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+    </div>
+
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/library">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><%= categ %> </li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container card-container d-flex flex-wrap justify-content-center"> 
+        <% books[categ].forEach(info => { %>
+            <div class="category">
+                <a href="/library/<%=categ%>/<%= info.name %>  ">
+                    <div class="category-img">
+                        <img src="<%=info.img%>" alt="book Image">
+                    </div>
+                    <div class="category-name">
+                        <center><h2><%=info.name%></h2></center>
+                    </div>
+                </a>
+            </div>
+        <% }); %> 
+    </div>
+
+
+   <%- include('partials/requestmodal'); %> 
+   <%- include('partials/contactModal'); %> 
+   <%- include('partials/scripts'); %> 
+</body>
+
+</html>

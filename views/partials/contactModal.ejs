@@ -1,0 +1,52 @@
+<!--CONTACT US MODAL -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="fullName" class="col-3">Full Name</label>
+                        <div class="col-9">
+                            <input type="text" name="fulllName" class="form-control" id="fullName" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-3">Email</label>
+                        <div class="col-9">
+                            <input type="email" name="email" class="form-control" id="fullName" required>
+                            <small id="emailHelp" class="text-warning">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="telNum" class="col-3">Mobile <small>(optional)</small></label>
+                        <div class="col-9">
+                            <input type="tel" name="telNum" id="telNum" class="form-control">
+                            <small id="telNumHelp" class="text-warning">We'll never share your mobile no. with anyone else.</small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedback" class="col-12 col-sm-3">Message</label>
+                        <div class="col-12 col-md-9">
+                            <textarea name="feedback" id="feedback" cols="35" rows="5"
+                                placeholder="Write your message here.." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="ml-auto mr-4">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

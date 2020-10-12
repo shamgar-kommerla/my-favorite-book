@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <title>Bookinfo</title>
+
+    <style>
+        body {
+            background-color: #00000027;
+        }
+
+        .navbar {
+            background-color: #000000ad;
+            z-index: 10;
+        }
+
+        .nav-item {
+            padding: 0.4rem 1rem;
+        }
+
+        .jumbotron {
+            position: relative !important;
+            background-image: url('./img/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+        }
+
+        .book {
+            width: 100%;
+            margin: auto;
+            padding: 1rem;
+            border: 2px solid black;
+        }
+
+
+        .book-img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .book-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal-body {
+            position: relative;
+            background-image: url(./img/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .modal-body::before {
+            content: "";
+            position: absolute;
+            background-color: #0000007d;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .modal-body form {
+            position: relative;
+            color: #ffffff;
+            z-index: 3;
+        }
+
+        .modal-header {
+            background-color: #000000ad;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron main-container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="/img/logo.png" alt="LOGO" height="60px" width="60px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-left">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/"><i class="fas fa-home"></i>Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/library"><i class="fa fa-book-reader"></i> BookShelf</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#requestModal"><i
+                                    class="fa fa-book"></i> Request book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#" data-toggle="modal" data-target="#contactModal"><i
+                                    class="fa fa-address-book"></i> Contact
+                                us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/library">Library</a></li>
+                <li class="breadcrumb-item " ><a href="/library/<%=bookCateg %> "><%= bookCateg %> </a></li>
+                <li class="breadcrumb-item active" aria-current="page"><%= bookName%></li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="book row">
+            <div class="book-img col-12 col-md-3">
+                <img src="<%= image %> " alt="BookThumbnail">
+            </div>
+            <div class="book-info col-12 col-md-9">
+                <div>
+                    <h1><%=bookName %></h1>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe, maxime quis adipisci
+                        minima
+                        inventore officiis voluptatibus qui et vel at magnam nisi unde molestiae reiciendis labore
+                        perferendis tempore iure.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officiis dolores at sapiente,
+                        nihil doloribus architecto libero est ducimus distinctio quasi quos, natus nemo similique
+                        consequuntur, consectetur assumenda explicabo delectus.
+                    </p>
+                </div>
+                <div>
+                    <a class="btn btn-primary" href="<%=dlwdLink %> "><i class="fa fa-download"></i>Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <%- include('partials/requestModal'); %> 
+    <%- include('partials/contactModal'); %> 
+    <%- include('partials/scripts'); %> 
+
+    
+</body>
+
+</html>
