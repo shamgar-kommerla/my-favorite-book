@@ -86,10 +86,10 @@ body {
     margin: 2rem;
     position: relative;
     background-color: aqua;
-    width: 200px;
+    width: 210px;
     height: 280px;
     overflow: hidden;
-    transition: all 0.7s;
+    transition: all 0.5s;
 }
 
 .category:hover{
