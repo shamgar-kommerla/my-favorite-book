@@ -72,12 +72,12 @@
     <div class="container card-container d-flex flex-wrap justify-content-center">
             <% categories.forEach(element => { %>
                 <div class="category">
-                 <a href="/library/<%= element %> ">
+                 <a href="/library/<%= element.categ %> ">
                         <div class="category-img">
-                            <img src="/img/tech.jpg" alt="">
+                            <img src="<%=element.img %> " alt="">
                         </div>
                         <div class="category-name">
-                            <center><h2> <%= element  %> </h2></center>
+                            <center><h2> <%= element.categ  %> </h2></center>
                         </div>
                     </a>
                 </div>     

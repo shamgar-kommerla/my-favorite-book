@@ -1,0 +1,95 @@
+body {
+    background-color: #00000027;
+}
+
+.navbar {
+    background-color: #000000ad;
+    z-index: 10;
+}
+
+.nav-item {
+    padding: 0.4rem 1rem;
+}
+
+.jumbotron {
+    position: relative !important;
+    background-image: url('/img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+.book {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+
+.book-img {
+    width: 400px;
+    height: 400px;
+}
+
+.book-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body {
+    position: relative;
+    background-image: url(/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.modal-body::before {
+    content: "";
+    position: absolute;
+    background-color: #0000007d;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.modal-body form {
+    position: relative;
+    color: #ffffff;
+    z-index: 3;
+}
+
+.modal-header {
+    background-color: #000000ad;
+    color: #ffffff;
+}
+
+.download-buttons a{
+    text-decoration: none;
+    color: #ffffff;
+    padding:5px 10px;
+    border-radius: 20px;
+}
+.pdf{
+    background-color: red;
+}
+.epub{
+    background-color: green;
+}
+.amazon{
+    background-color:#146eb4;
+}
+
+.pdf:hover{
+    background-color: rgba(104, 23, 23, 0.863);
+}
+.epub:hover{
+    background-color: rgb(28, 65, 28);
+}
+.amazon:hover{
+    background-color:#0f3f64;
+}

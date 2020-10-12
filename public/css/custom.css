@@ -14,7 +14,7 @@ body{
 
 .container-fluid{
     position: relative !important;
-    background-image: url('../img/bg.jpg');
+    background-image: url('/img/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -94,7 +94,7 @@ body{
 
   .modal-body{
     position: relative;
-    background-image: url(../img/bg.jpg);
+    background-image: url(/img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

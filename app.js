@@ -66,30 +66,22 @@ var selectedCategory = '' ;
 
 app.get('/library', (req,res) => {
   let categories = [
-    'Romance',
-    'Health',
-    'Comedy',
-    'Horror',
-    'SciFi'
+    {categ : 'Romance',img:'/img/categThumbs/Romance.jpg'},
+    {categ :'Health',img:'/img/categThumbs/Health.jpg'},
+    {categ :'Comedy',img:'/img/categThumbs/Comedy.jpg'},
+    {categ :'Horror',img:'/img/categThumbs/Horror.jpg'},
+    {categ :'Science',img:'/img/categThumbs/SciFi.jpeg'},
   ];
   res.render("library",{ categories:categories} );
-
 })
 
-app.get('/books',(req,res)=>{
-  res.render("books");
-})
-
-app.get('/bookInfo',(req,res)=>{
-  res.render('bookInfo');
-})
 
 
 app.get('/library/:categ',(req,res)=>{
   let selectedCategory = req.params.categ;
-  console.log(selectedCategory);
   res.render("books",{categ:selectedCategory, books: books}); 
 })
+
 
 app.get('/library/:categ/:bookName',(req,res)=>{
   let selectedCategory = req.params.categ;
@@ -102,15 +94,11 @@ app.get('/library/:categ/:bookName',(req,res)=>{
      dlwdLink = book.ebook;
    }
  });
-
-  console.log(selectedCategory + "  " + selectedBook + " " + bookImg + " " +dlwdLink);
-
   res.render("bookInfo",{bookCateg:selectedCategory,bookName:selectedBook,image : bookImg,dlwdLink: dlwdLink});
 })
 
 app.get('/requests',(req,res)=>{
   res.render("requests");
-
 })
 
 if (port == null || port == "") {
