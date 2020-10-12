@@ -1,9 +1,11 @@
 //jshint esversion:6
 
+let port = process.env.PORT;
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const _ = require('lodash');
+
 
 const app = express();
 
@@ -111,5 +113,7 @@ app.get('/requests',(req,res)=>{
 
 })
 
-
-app.listen(3000, () => console.log('Server ready'));
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
