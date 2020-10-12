@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  
     <title><%= bookName%></title>
+
 
     <style>
         body {
@@ -78,6 +80,34 @@
             background-color: #000000ad;
             color: #ffffff;
         }
+
+        .download-buttons a{
+            text-decoration: none;
+            color: #ffffff;
+            padding:5px 10px;
+            border-radius: 20px;
+        }
+        .pdf{
+            background-color: red;
+        }
+        .epub{
+            background-color: green;
+        }
+        .amazon{
+            background-color:#146eb4;
+        }
+
+        .pdf:hover{
+            background-color: rgba(104, 23, 23, 0.863);
+        }
+        .epub:hover{
+            background-color: rgb(28, 65, 28);
+        }
+        .amazon:hover{
+            background-color:#0f3f64;
+        }
+        
+
     </style>
 </head>
 
@@ -146,8 +176,10 @@
                         consequuntur, consectetur assumenda explicabo delectus.
                     </p>
                 </div>
-                <div>
-                    <a class="btn btn-primary" href="<%=dlwdLink %> "><i class="fa fa-download"></i>Download</a>
+                <div class="download-buttons">
+                    <a class="pdf" href="<%=dlwdLink %>"><i class="fa fa-file-pdf"></i> PDF</a>
+                    <a class="epub" href=""><i class="fa fa-book"></i> EPUB</a>
+                    <a class="amazon" href=""><i class="fa fa-shopping-cart"></i> amazon</a>
                 </div>
             </div>
         </div>
