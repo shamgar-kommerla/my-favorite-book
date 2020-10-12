@@ -34,7 +34,7 @@ body{
 .introduction h1{
     color: yellow;
     font-weight: bolder;
-    letter-spacing: 2rem;
+    letter-spacing: 1rem;
 }
 .introduction p{
     color:wheat;
@@ -57,9 +57,15 @@ body{
     }
 
     .introduction{
-        top: 60%;
+        top: 55%;
         left: 50%;
     }
+    .introduction h1{
+        color: yellow;
+        font-weight: bold;
+        letter-spacing: 0rem;
+    }
+
 }
 
 
