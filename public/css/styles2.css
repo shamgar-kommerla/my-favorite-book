@@ -163,3 +163,22 @@ body {
     color: #ffffff;
 }
 
+
+
+.free-paid{
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+
+.strip{
+    padding:0.5rem ;
+    position: relative;
+    top: 0;
+    background-color: rgba(83, 66, 66, 0.822);
+    color: white; 
+}

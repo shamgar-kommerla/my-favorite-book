@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 var books = {
   Romance : [
-    {name : "Half Girlfriend",img : "/img/thmb.webp", ebook: "/library/romance/HalfGirlfriend.pdf"},
+    {name : "Half Girlfriend one two",img : "/img/thmb.webp", ebook: "/library/romance/HalfGirlfriend.pdf", amazon: "#"},
     {name : "Book_2",img : "/img/thmb.webp"},
     {name : "Book_3",img : "/img/thmb.webp"},
     {name : "Book_4",img : "/img/thmb.webp"},
@@ -62,7 +62,6 @@ app.get('/', (req, res) => {
   res.render("home");
 })
 
-var selectedCategory = '' ;
 
 app.get('/library', (req,res) => {
   let categories = [
@@ -97,11 +96,17 @@ app.get('/library/:categ/:bookName',(req,res)=>{
   res.render("bookInfo",{bookCateg:selectedCategory,bookName:selectedBook,image : bookImg,dlwdLink: dlwdLink});
 })
 
+
+app.get('/about',(req,res)=>{
+  res.render('About');
+})
+
+
 app.get('/requests',(req,res)=>{
   res.render("requests");
 })
 
 if (port == null || port == "") {
-  port = 8000;
+  port = 3000;
 }
 app.listen(port);

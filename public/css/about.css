@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('/img/bg.jpg');
+    background-repeat: repeat-y;
+    /* background-size: cover; */
+}
+.nav-item{
+    padding : 0.4rem 1rem;
+}
+
+.navbar{
+    background-color: #000000ad;
+    top: 2.2rem;
+    z-index: 10;
+}
+
+.container-fluid{
+    position: relative !important;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+}
+
+
+.about-us{
+    position: absolute;
+    color: white;
+    z-index:5;
+    padding: 1rem;
+    background-color: #000000cb;
+    min-height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    border-radius: 5px;
+}
+
+.about-us .contact-details{
+    width: 50%;
+    margin: 1rem auto;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .navbar{
+        top: 0;
+        background-color: #000000d4  ;
+    }
+   
+    .about-us{
+        top:70%;
+    }
+}
+
+.modal-body{
+    position: relative;
+    background-image: url(/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color:#ffffff;
+    font-weight: 500;
+}
+
+.modal-body::before{
+    content: "";
+    position: absolute;
+    background-color: #0000007d;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.modal-body form{
+      position: relative;
+      color: #ffffff;
+        z-index: 3;
+  }
+
+  .modal-header{
+      background-color: #000000ad;
+      color: #ffffff;
+  }

@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="/img/icon.ico" >
+
     <title><%= categ %> </title>
 
     <!-- css links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link rel="stylesheet" href="/css/styles2.css" > 
+    <link rel="stylesheet" href="/css/styles2.css">
 </head>
 
 <body>
@@ -48,8 +50,8 @@
 
         <div class="container blockquote-container">
             <div>
-                <p>`` Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. ``</p>
-                <footer class="text-right">- <cite title="Source Title">Source Title</cite></footer>
+                <p>“Reading is an exercise in empathy; an exercise in walking in someone else’s shoes for a while.”</p>
+                <footer class="text-right">- <cite title="Source Title">Malorie Blackman</cite></footer>
             </div>
         </div>
 
@@ -67,25 +69,58 @@
         </nav>
     </div>
 
-    <div class="container card-container d-flex flex-wrap justify-content-center"> 
-        <% books[categ].forEach(info => { %>
+    <div class="container free-paid">
+        <div class="strip">
+            <center>
+                <h1>Free Books</h1>
+            </center>
+        </div>
+        <div class="container d-flex flex-wrap justify-content-center">
+            <% books[categ].forEach(info => { %>
             <div class="category">
                 <a href="/library/<%=categ%>/<%= info.name %>  ">
                     <div class="category-img">
                         <img src="<%=info.img%>" alt="book Image">
                     </div>
                     <div class="category-name">
-                        <center><h2><%=info.name%></h2></center>
+                        <center>
+                            <p><b><%=info.name%></b></p>
+                        </center>
                     </div>
                 </a>
             </div>
-        <% }); %> 
+            <% }); %>
+        </div>
     </div>
 
 
-   <%- include('partials/requestModal'); %> 
-   <%- include('partials/contactModal'); %> 
-   <%- include('partials/scripts'); %> 
+    <div class="container free-paid">
+        <div class="strip">
+            <center>
+                <h1>Paid Books</h1>
+            </center>
+        </div>
+        <div class="container d-flex flex-wrap justify-content-center">
+            <% books[categ].forEach(info => { %>
+            <div class="category">
+                <a href="/library/<%=categ%>/<%= info.name %>">
+                    <div class="category-img">
+                        <img src="<%=info.img%>" alt="book Image">
+                    </div>
+                    <div class="category-name">
+                        <center>
+                            <p><b><%=info.name%></b></p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <%- include('partials/requestModal'); %>
+    <%- include('partials/contactModal'); %>
+    <%- include('partials/scripts'); %>
 </body>
 
 </html>
