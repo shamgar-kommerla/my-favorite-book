@@ -117,14 +117,14 @@ body {
 }
 
 .category:hover .category-name {
-    transform: translateY(-40px);
+    transform: translateY(-30px);
 }
 
 @media screen and (max-width: 1000px) {
     .category-name {
       
         width: 100%;
-        height: 40px;
+        height: 30px;
         bottom:0;
     }
     .category:hover .category-name {
